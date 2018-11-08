@@ -15,4 +15,5 @@ class AnimalTest < MiniTest::Test
     actual = @animal1.name
     assert_equal(expected, actual)
   end
+
 end

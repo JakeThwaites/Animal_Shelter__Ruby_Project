@@ -15,7 +15,9 @@ class Animal
   end
 
   def self.all()
-
+    sql = "SELECT * FROM animals"
+    values = []
+    SqlRunner.run(sql, values)
   end
 
   def save()
