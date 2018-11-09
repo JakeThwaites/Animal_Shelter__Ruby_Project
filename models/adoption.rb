@@ -11,6 +11,16 @@ class Adoption
     @id = options["id"] if options["id"]
   end
 
+  def self.all()
+    sql = "SELECT * FROM adoptions"
+    SqlRunner.run(sql)
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM adoptions"
+    SqlRunner.run(sql)
+  end
+
   def save()
     sql = "INSERT INTO adoptions (animal_id, owner_id, adoption_date) VALUES ($1, $2, $3) RETURNING id;"
     values = [@animal_id, @owner_id, @adoption_date]
@@ -22,11 +32,6 @@ class Adoption
     sql = "DELETE FROM adoptions WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql values)
-  end
-
-  def self.delete_all()
-    sql = "DELETE FROM adoptions"
-    SqlRunner.run(sql)
   end
 
   def update()

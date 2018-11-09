@@ -27,10 +27,6 @@ animal2 = Animal.new({
 
 animal2.save()
 
-# animal1.name = "Bob"
-# animal1.update()
-# animal2.delete()
-
 
 owner1 = Owner.new({"name" => "Jake", "age" => 26})
 owner1.save()
