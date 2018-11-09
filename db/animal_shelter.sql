@@ -18,7 +18,8 @@ CREATE TABLE animals
   breed VARCHAR(255),
   sex VARCHAR(255),
   admission_date DATE,
-  availability VARCHAR(255)
+  availability VARCHAR(255),
+  pet_description TEXT
 );
 
 CREATE TABLE adoptions

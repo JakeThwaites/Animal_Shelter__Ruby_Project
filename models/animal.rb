@@ -3,7 +3,7 @@ require_relative('../db/sql_runner')
 class Animal
 
   attr_reader :age, :species, :breed, :sex, :id
-  attr_accessor :name
+  attr_accessor :name, :availability
 
   def initialize(options)
     @name = options["name"]
@@ -12,6 +12,8 @@ class Animal
     @breed = options["breed"]
     @sex = options["sex"]
     @admission_date = options["admission_date"]
+    @availability = options["availability"]
+    @pet_description = ""
     @id = options["id"] if options["id"]
   end
 
@@ -40,7 +42,6 @@ class Animal
     SqlRunner.run(sql)
   end
 
-
   def save()
     sql = "INSERT INTO animals (name, age, species, breed, sex, admission_date, availability) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING ID"
     values = [@name, @age, @species, @breed, @sex, @admission_date, @availability]
@@ -49,8 +50,8 @@ class Animal
   end
 
   def update()
-    sql = "UPDATE animals SET (name, age, species, breed, sex, admission_date, availability) = ($1, $2, $3, $4, $5, $6, $7) WHERE id = $8"
-    values = [@name, @age, @species, @breed, @sex, @admission_date, @availability, @id]
+    sql = "UPDATE animals SET (name, age, species, breed, sex, admission_date, availability, pet_description) = ($1, $2, $3, $4, $5, $6, $7, $8) WHERE id = $9"
+    values = [@name, @age, @species, @breed, @sex, @admission_date, @availability, @pet_description, @id, ]
     SqlRunner.run(sql, values)
   end
 
@@ -67,8 +68,9 @@ class Animal
     return owners.map { |owner| Owner.new(owner) }
   end
 
-  def assign_to_owner(owner)
-
+  def add_pet_description(text)
+    @pet_description = text
+    update()
   end
 
 end

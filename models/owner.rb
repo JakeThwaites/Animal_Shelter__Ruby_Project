@@ -52,5 +52,7 @@ class Owner
   def adopt_an_animal(animal, date)
     adoption = Adoption.new({"owner_id" => @id, "animal_id" => animal.id, "adoption_date" => date})
     adoption.save()
+    animal.availability = "Adopted"
+    animal.update()
   end
 end

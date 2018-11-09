@@ -13,7 +13,8 @@ animal1 = Animal.new({
   "species" => "Dog",
   "breed" => "Tibetan Terrier",
   "sex" => "Male",
-  "admission_date" => '1992-04-19'})
+  "admission_date" => '1992-04-19',
+  "availability" => "available"})
 
 animal1.save()
 
@@ -23,7 +24,8 @@ animal2 = Animal.new({
     "species" => "Dog",
     "breed" => "King Charles Spaniel",
     "sex" => "Male",
-    "admission_date" => '2012-12-20' })
+    "admission_date" => '2012-12-20',
+    "availability" => "available" })
 
 animal2.save()
 
@@ -33,7 +35,8 @@ animal3 = Animal.new({
     "species" => "Cat",
     "breed" => "black",
     "sex" => "Male",
-    "admission_date" => '2012-12-05' })
+    "admission_date" => '2012-12-05',
+    "availability" => "available" })
 
 animal3.save()
 
@@ -48,13 +51,11 @@ owner3 = Owner.new({"name" => "Rob", "age" => 23})
 owner3.save()
 
 
+owner1.adopt_an_animal(animal1, '2008-09-01')
+owner2.adopt_an_animal(animal2, '2008-09-01')
 
-adoption1 = Adoption.new({"animal_id" => animal1.id, "owner_id" => owner1.id, "adoption_date" => '2008-09-01'})
-adoption1.save()
-
-adoption2 = Adoption.new({"animal_id" => animal2.id, "owner_id" => owner2.id, "adoption_date" => '2008-09-01'})
-adoption2.save()
-
+animal1.add_pet_description("Archie is a very good boy")
+animal2.add_pet_description("Walter is a very good boy")
 
 binding.pry
 nil
