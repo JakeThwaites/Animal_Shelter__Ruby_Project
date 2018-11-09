@@ -3,6 +3,7 @@ require_relative("../models/owner")
 require("pry-byebug")
 
 Animal.delete_all()
+Owner.delete_all()
 
 animal1 = Animal.new({
   'name' => 'Archie',
@@ -29,8 +30,11 @@ animal2.save()
 # animal2.delete()
 
 
-owner1 = Owner.new({"name" => "Jake", "age" => "26"})
+owner1 = Owner.new({"name" => "Jake", "age" => 26})
 owner1.save()
+
+owner2 = Owner.new({"name" => "Chris", "age" => 30})
+owner2.save()
 
 binding.pry
 nil

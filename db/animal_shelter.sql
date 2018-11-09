@@ -27,5 +27,3 @@ CREATE TABLE adoptions
   owner_id INT8 references owners(id),
   animal_id INT8 references animals(id)
 );
-
--- INSERT INTO animals (name, age, species, breed, sex, admission_date, availability) VALUES ("Archie", "11", "Dog", "TT", "male", 20/12/2012, "available") RETURNING ID
