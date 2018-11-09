@@ -12,5 +12,32 @@ get '/owners' do
 end
 
 get '/owners/new' do
+  @owner = Owner.find_owner_by_id(params['id'])
   erb(:"owners/new")
+end
+
+post '/owners' do
+  owner = Owner.new(params)
+  owner.save()
+  redirect to("/owners")
+end
+
+get '/owners/:id' do
+  @owner = Owner.find_owner_by_id(params['id'])
+  erb(:"owners/show")
+end
+
+get '/owners/:id/edit' do
+  @owner = Owner.find_owner_by_id(params['id'])
+  erb(:"/owners/edit")
+end
+
+post '/owners/:id' do
+  owner = owner.update()
+  redirect to("/owners/show")
+end
+
+post '/owners/:id/delete' do
+  owner.delete()
+  redirect to(:"/owners")
 end
