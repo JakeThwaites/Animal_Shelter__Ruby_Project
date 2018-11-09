@@ -73,4 +73,12 @@ class Animal
     update()
   end
 
+  def self.find_animal_by_id(id)
+    sql = "SELECT * FROM animals WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    animal = Animal.new(result)
+    return animal
+  end
+
 end
