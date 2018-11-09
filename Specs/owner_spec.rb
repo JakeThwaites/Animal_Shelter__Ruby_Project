@@ -4,7 +4,6 @@ require_relative('../models/owner')
 require_relative('../models/animal')
 
 
-
 class OwnerTest < MiniTest::Test
 
   def setup

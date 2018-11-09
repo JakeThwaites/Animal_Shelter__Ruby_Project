@@ -55,4 +55,12 @@ class Owner
     animal.availability = "Adopted"
     animal.update()
   end
+
+  def self.find_owner_by_id(id)
+    sql = "SELECT * FROM owners WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    owner = Animal.new(result)
+    return owner
+  end
 end

@@ -3,7 +3,6 @@ require('minitest/rg')
 require_relative('../models/animal')
 
 
-
 class AnimalTest < MiniTest::Test
 
   def setup
