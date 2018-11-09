@@ -6,3 +6,9 @@
 <p>Breed: <%= @animal.breed %></p>
 <p>Sex: <%= @animal.sex %></p>
 <p>Admission Date: <%= @animal.admission_date %></p>
+<a href="/animals/ <%= @animal.id %>/edit">Edit</a>
+
+<form action="/animals/ <%= @animal.id %>/delete" method="post">
+<input type="submit" value="delete">
+
+</form>
