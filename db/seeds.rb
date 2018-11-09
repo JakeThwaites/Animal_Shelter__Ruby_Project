@@ -3,6 +3,7 @@ require_relative("../models/owner")
 require_relative("../models/adoption")
 require("pry-byebug")
 
+Adoption.delete_all()
 Animal.delete_all()
 Owner.delete_all()
 
