@@ -2,7 +2,8 @@ require_relative('../db/sql_runner')
 
 class Animal
 
-  attr_reader :name, :age, :species, :breed, :sex, :id
+  attr_reader :age, :species, :breed, :sex, :id
+  attr_accessor :name
 
   def initialize(options)
     @name = options["name"]
@@ -25,6 +26,12 @@ class Animal
     values = [@name, @age, @species, @breed, @sex, @admission_date, @availability]
     animal = SqlRunner.run(sql, values)
     @id = animal.first()['id'].to_i
+  end
+
+  def update()
+    sql = "UPDATE animals SET (name, age, species, breed, sex, admission_date, availability) = ($1, $2, $3, $4, $5, $6, $7) WHERE id = $8"
+    values = [@name, @age, @species, @breed, @sex, @admission_date, @availability, @id]
+    SqlRunner.run(sql, values)
   end
 
 end

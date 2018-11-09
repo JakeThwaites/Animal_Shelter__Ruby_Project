@@ -16,4 +16,5 @@ class AnimalTest < MiniTest::Test
     assert_equal(expected, actual)
   end
 
+  
 end
