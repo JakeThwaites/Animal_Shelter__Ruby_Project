@@ -1,7 +1,7 @@
 require_relative( "../models/animal.rb" )
 require("pry-byebug")
 
-# Animal.delete_all()
+Animal.delete_all()
 
 animal1 = Animal.new({
   'name' => 'Archie',
@@ -23,9 +23,9 @@ animal2 = Animal.new({
 
 animal2.save()
 
-animal1.name = "Bob"
-animal1.update()
-animal2.delete()
+# animal1.name = "Bob"
+# animal1.update()
+# animal2.delete()
 
 binding.pry
 nil
