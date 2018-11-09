@@ -25,6 +25,7 @@ animal2.save()
 
 animal1.name = "Bob"
 animal1.update()
+animal2.delete()
 
 binding.pry
 nil
