@@ -1,4 +1,7 @@
 require_relative('../db/sql_runner')
+require_relative('animal')
+require_relative('adoption')
+
 
 class Owner
 
@@ -38,5 +41,16 @@ class Owner
     values = [@id]
     SqlRunner.run(sql, values)
   end
-  
+
+  def adopted_animals()
+    sql = "SELECT animals.* FROM animals INNER JOIN adoptions ON animals.id = adoptions.animal_id WHERE adoptions.owner_id = $1"
+    values = [@id]
+    animals = SqlRunner.run(sql, values)
+    return animals.map { |animal| Animal.new(animal) }
+  end
+
+  def adopt_an_animal(animal, date)
+    adoption = Adoption.new({"owner_id" => @id, "animal_id" => animal.id, "adoption_date" => date})
+    adoption.save()
+  end
 end

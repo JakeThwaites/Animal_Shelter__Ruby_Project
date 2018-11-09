@@ -52,4 +52,8 @@ class Animal
     return owners.map { |owner| Owner.new(owner) }
   end
 
+  def assign_to_owner(owner)
+    
+  end
+
 end
