@@ -1,6 +1,6 @@
 require('minitest/autorun')
 require('minitest/rg')
-require_relative('../animal')
+require_relative('../models/animal')
 
 
 
@@ -16,5 +16,5 @@ class AnimalTest < MiniTest::Test
     assert_equal(expected, actual)
   end
 
-  
+
 end

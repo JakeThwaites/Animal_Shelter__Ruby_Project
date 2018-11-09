@@ -1,4 +1,5 @@
-require_relative( "../models/animal.rb" )
+require_relative( "../models/animal" )
+require_relative("../models/owner")
 require("pry-byebug")
 
 Animal.delete_all()
@@ -26,6 +27,10 @@ animal2.save()
 # animal1.name = "Bob"
 # animal1.update()
 # animal2.delete()
+
+
+owner1 = Owner.new({"name" => "Jake", "age" => "26"})
+owner1.save()
 
 binding.pry
 nil

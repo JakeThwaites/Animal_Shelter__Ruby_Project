@@ -21,6 +21,11 @@ class Animal
     SqlRunner.run(sql, values)
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM animals"
+    SqlRunner.run(sql)
+  end
+
   def save()
     sql = "INSERT INTO animals (name, age, species, breed, sex, admission_date, availability) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING ID"
     values = [@name, @age, @species, @breed, @sex, @admission_date, @availability]
@@ -38,11 +43,6 @@ class Animal
     sql = "DELETE FROM animals WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
-  end
-
-  def self.delete_all()
-    sql = "DELETE FROM animals"
-    SqlRunner.run(sql)
   end
 
 end
