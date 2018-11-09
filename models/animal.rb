@@ -21,10 +21,25 @@ class Animal
     SqlRunner.run(sql, values)
   end
 
+  def self.find_by_species(species)
+    sql = "SELECT * FROM animals WHERE species = $1"
+    values = [species]
+    animals = SqlRunner.run(sql, values)
+    return animals.map { |animal| Animal.new(animal) }
+  end
+
+  def self.find_by_breed(breed)
+    sql = "SELECT * FROM animals WHERE species = $1"
+    values = [breed]
+    animals = SqlRunner.run(sql, values)
+    return animals.map { |animal| Animal.new(animal) }
+  end
+
   def self.delete_all()
     sql = "DELETE FROM animals"
     SqlRunner.run(sql)
   end
+
 
   def save()
     sql = "INSERT INTO animals (name, age, species, breed, sex, admission_date, availability) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING ID"
@@ -53,7 +68,7 @@ class Animal
   end
 
   def assign_to_owner(owner)
-    
+
   end
 
 end
