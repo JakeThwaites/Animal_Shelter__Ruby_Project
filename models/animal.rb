@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Animal
 
-  attr_reader :age, :species, :breed, :sex, :id
+  attr_reader :age, :species, :breed, :sex, :id, :admission_date, :pet_description 
   attr_accessor :name, :availability
 
   def initialize(options)
