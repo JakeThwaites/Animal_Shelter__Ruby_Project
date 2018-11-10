@@ -1,1 +1,13 @@
-<h1>owners</h1>
+<h1>Owners</h1>
+
+<h4><a href="owners/new">Add New Owner</a></h4>
+
+<div id="owner-wrapper">
+  <% for owner in @owners %>
+  <div class="owner">
+    <h3><%= owner.name %></h3>
+    <p>Age: <%= owner.age %></p>
+    <a href="owners/<%= owner.id %>">View more info</a>
+  </div>
+  <% end %>
+</div>
