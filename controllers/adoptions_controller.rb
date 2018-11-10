@@ -20,5 +20,11 @@ post '/adoptions' do
 end
 
 get '/adoptions/:id' do
-  erb()
+  @adoption = Adoption.find_adoption_by_id(params['id'])
+  erb(:"adoptions/show")
+end
+
+post '/adoptions/:id/delete' do
+  adoption.delete()
+  redirect to(:"/adoption")
 end

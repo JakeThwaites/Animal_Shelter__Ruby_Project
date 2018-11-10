@@ -18,7 +18,7 @@ end
 post '/animals' do
   animal = Animal.new(params)
   animal.save()
-  redirect to("/animals")
+  redirect to "/animals"
 end
 
 get '/animals/:id' do
@@ -37,6 +37,7 @@ post '/animals/:id' do
 end
 
 post '/animals/:id/delete' do
+  animal = Animal.find_animal_by_id(params['id'])
   animal.delete()
-  redirect to(:"/animals")
+  redirect to "/animals"
 end
