@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Animal
 
-  attr_reader :age, :species, :breed, :sex, :id, :admission_date, :pet_description 
+  attr_reader :age, :species, :breed, :sex, :id, :admission_date, :pet_description
   attr_accessor :name, :availability
 
   def initialize(options)
@@ -20,7 +20,8 @@ class Animal
   def self.all()
     sql = "SELECT * FROM animals"
     values = []
-    SqlRunner.run(sql, values)
+    result = SqlRunner.run(sql, values)
+    return result.map { |animal| Animal.new(animal) }
   end
 
   def self.find_by_species(species)
