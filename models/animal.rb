@@ -13,7 +13,7 @@ class Animal
     @sex = options["sex"]
     @admission_date = options["admission_date"]
     @availability = options["availability"]
-    @pet_description = ""
+    @pet_description = options["pet_description"] if options["pet_description"]
     @id = options["id"] if options["id"]
   end
 
@@ -44,8 +44,8 @@ class Animal
   end
 
   def save()
-    sql = "INSERT INTO animals (name, age, species, breed, sex, admission_date, availability) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING ID"
-    values = [@name, @age, @species, @breed, @sex, @admission_date, @availability]
+    sql = "INSERT INTO animals (name, age, species, breed, sex, admission_date, availability, pet_description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING ID"
+    values = [@name, @age, @species, @breed, @sex, @admission_date, @availability, @pet_description]
     animal = SqlRunner.run(sql, values)
     @id = animal.first()['id'].to_i
   end

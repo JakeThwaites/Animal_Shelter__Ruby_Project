@@ -32,8 +32,9 @@ get '/animals/:id/edit' do
 end
 
 post '/animals/:id' do
-  animal = animal.update()
-  redirect to("/animals/show")
+  animal = Animal.new(params)
+  animal.update()
+  redirect to "/animals/#{params['id']}"
 end
 
 post '/animals/:id/delete' do

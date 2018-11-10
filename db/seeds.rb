@@ -14,7 +14,8 @@ animal1 = Animal.new({
   "breed" => "Tibetan Terrier",
   "sex" => "Male",
   "admission_date" => '1992-04-19',
-  "availability" => "available"})
+  "availability" => "available",
+  "pet_description" => "Archie is a very good boy"})
 
 animal1.save()
 
@@ -25,7 +26,8 @@ animal2 = Animal.new({
     "breed" => "King Charles Spaniel",
     "sex" => "Male",
     "admission_date" => '2012-12-20',
-    "availability" => "available" })
+    "availability" => "available",
+    "pet_description" => "Walter is a very good boy" })
 
 animal2.save()
 
