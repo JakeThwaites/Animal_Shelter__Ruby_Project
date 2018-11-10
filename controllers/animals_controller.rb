@@ -8,6 +8,7 @@ also_reload( '../models/*' )
 
 get '/animals' do
   @animals = Animal.all()
+  species = params[:species]
   erb ( :"animals/index" )
 end
 
@@ -19,6 +20,11 @@ post '/animals' do
   animal = Animal.new(params)
   animal.save()
   redirect to "/animals"
+end
+
+get '/animals/species/:species' do
+  @animals = Animal.find_by_species(params['species'])
+  erb(:"animals/species")
 end
 
 get '/animals/:id' do

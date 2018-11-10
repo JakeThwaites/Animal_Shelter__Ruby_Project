@@ -1,1 +1,15 @@
 <h1>Adoptions</h1>
+
+<h4><a href="owners/new">Add New Owner</a></h4>
+
+<div id="owner-wrapper">
+  <% for adoptions in @adoptions %>
+  <div class="adoption">
+    <h3><%= adoption.name %></h3>
+    <p>Age: <%= owner.age %></p>
+    <p>Contact Number: <%= owner.contact_number %></p>
+    <a href="owners/<%= owner.id %>">View more info</a>
+  </div>
+  <% end %>
+</div>
+name %></h3>

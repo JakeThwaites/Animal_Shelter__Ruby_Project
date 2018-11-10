@@ -38,6 +38,15 @@ class Animal
     return animals.map { |animal| Animal.new(animal) }
   end
 
+  def self.all_species
+    unique_specieses = []
+    all_animals = self.all()
+    for animal in all_animals
+      unique_specieses.push(animal.species)
+    end
+    return unique_specieses.uniq
+  end
+
   def self.delete_all()
     sql = "DELETE FROM animals"
     SqlRunner.run(sql)
