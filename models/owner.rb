@@ -5,7 +5,7 @@ require_relative('adoption')
 
 class Owner
 
-  attr_reader :name, :age, :id
+  attr_reader :name, :age, :id, :contact_number, :address_1, :address_2, :city, :post_code
 
   def initialize(options)
     @name = options['name']
@@ -66,7 +66,7 @@ class Owner
     sql = "SELECT * FROM owners WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values).first
-    owner = Animal.new(result)
+    owner = Owner.new(result)
     return owner
   end
 end

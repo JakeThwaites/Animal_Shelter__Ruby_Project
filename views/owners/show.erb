@@ -3,7 +3,11 @@
 <h2><%= @owner.name %></h2>
 
 <p>Age: <%= @owner.age %></p>
-<p>REMEMBER TO ADD AN OWNER ADDRESS AND MAYBE TEXT BOX DESCRIPTION OF THEM</p>
+<p>Contact Number <%= @owner.contact_number %></p>
+<p>Address 1: <%= @owner.address_1 %></p>
+<p>Address 2: <%= @owner.address_2 %></p>
+<p>City: <%= @owner.city %></p>
+<p>Post Code: <%= @owner.post_code %></p>
 
 <a href="/owners/ <%= @owner.id %>/edit">Edit</a>
 
