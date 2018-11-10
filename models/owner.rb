@@ -10,6 +10,11 @@ class Owner
   def initialize(options)
     @name = options['name']
     @age = options['age']
+    @contact_number = options['contact_number']
+    @address_1 = options['address_1']
+    @address_2 = options['address_2'] if options['address_2']
+    @city = options['city'] if options['city']
+    @post_code = options['post_code']
     @id = options['id'] if options['id']
   end
 
@@ -25,15 +30,15 @@ class Owner
   end
 
   def save()
-    sql = "INSERT INTO owners (name, age) VALUES ($1, $2) RETURNING id"
-    values = [@name, @age]
+    sql = "INSERT INTO owners (name, age, contact_number, address_1, address_2, city, post_code) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id"
+    values = [@name, @age, @contact_number, @address_1, @address_2, @city, @post_code]
     owner = SqlRunner.run(sql, values)
     @id = owner.first()['id'].to_i
   end
 
   def update()
-    sql = "UPDATE owners SET (name, age) = ($1, $2) WHERE id = $3"
-    values = [@name, @age, @id]
+    sql = "UPDATE owners SET (name, age, contact_number, address_1, address_2, city, post_code) = ($1, $2, $3, $4, $5, $6, $7) WHERE id = $8"
+    values = [@name, @age, @contact_number, @address_1, @address_2, @city, @post_code, @id]
     SqlRunner.run(sql, values)
   end
 

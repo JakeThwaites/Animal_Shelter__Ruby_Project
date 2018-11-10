@@ -7,6 +7,7 @@
 
 <a href="/owners/ <%= @owner.id %>/edit">Edit</a>
 
-<form action="/owners/ <%= @owner.id %>/delete" method="post">
+<form action="/owners/<%= @owner.id %>/delete" method="post">
 <input type="submit" value="delete">
+
 </form>

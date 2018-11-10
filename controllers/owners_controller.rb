@@ -40,5 +40,5 @@ end
 post '/owners/:id/delete' do
   owner = Owner.find_owner_by_id(params['id'])
   owner.delete()
-  redirect to(:"/owners")
+  redirect to "/owners"
 end

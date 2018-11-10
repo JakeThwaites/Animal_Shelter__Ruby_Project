@@ -6,7 +6,12 @@ CREATE TABLE owners
 (
   id SERIAL8 primary key,
   name VARCHAR(255),
-  age INT4
+  age INT4,
+  contact_number VARCHAR(15),
+  address_1 VARCHAR(120) NOT NULL,
+  address_2 VARCHAR(120),
+  city VARCHAR(120),
+  post_code VARCHAR(16) NOT NULL
 );
 
 CREATE TABLE animals

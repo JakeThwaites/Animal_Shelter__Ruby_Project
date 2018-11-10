@@ -43,21 +43,18 @@ animal3 = Animal.new({
 animal3.save()
 
 
-owner1 = Owner.new({"name" => "Jake", "age" => 26})
+owner1 = Owner.new({"name" => "Jake", "age" => 26, "contact_number" => "0123456789", "address_1" => "123 Fake Street", "address_2" => "Someplace far away", "city" => "Edinburgh", "post_code" => "EH11 1ED"})
 owner1.save()
 
-owner2 = Owner.new({"name" => "Chris", "age" => 30})
+owner2 = Owner.new({"name" => "Chris", "age" => 30, "contact_number" => "0123434624", "address_1" => "1 Princes Street", "city" => "Edinburgh", "post_code" => "EH1 1DD"})
 owner2.save()
 
-owner3 = Owner.new({"name" => "Rob", "age" => 23})
+owner3 = Owner.new({"name" => "Rob", "age" => 23, "contact_number" => "01234796524", "address_1" => "Street name", "address_2" => "Place", "city" => "Berlin", "post_code" => "germany"})
 owner3.save()
 
 
 owner1.adopt_an_animal(animal1, '2008-09-01')
 owner2.adopt_an_animal(animal2, '2008-09-01')
-
-animal1.add_pet_description("Archie is a very good boy")
-animal2.add_pet_description("Walter is a very good boy")
 
 binding.pry
 nil
