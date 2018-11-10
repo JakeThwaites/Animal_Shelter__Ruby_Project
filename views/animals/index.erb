@@ -1,12 +1,13 @@
 <h1>Look at all the animals!</h1>
 
-<h4><a href="animals">Add New Animal</a></h4>
-<!-- <h3>
-  <form method="GET" action="submit">
-    <input type="text" name="species" value="">
-    <input type="submit" value="species">
-  </form>
-</h3> -->
+<h4><a href="animals/new">Add New Animal</a></h4>
+
+<h4><select class="species" name="species">
+  <% for animal in @animals %>
+  <option value="<%= animal.species %>"><%= animal.species %></option>
+  <% end %>
+</select><a href="animals/species/<%= animal.species %>">Sort by species</a></h4>
+
 
 <div id="animal-wrapper">
   <% for animal in @animals %>
