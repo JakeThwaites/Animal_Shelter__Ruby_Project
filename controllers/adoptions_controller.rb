@@ -31,6 +31,7 @@ get '/adoptions/:id' do
 end
 
 post '/adoptions/:id/delete' do
+  adoption = Adoption.find_adoption_by_id(params['id'])
   adoption.delete()
-  redirect to(:"/adoption")
+  redirect to "/adoptions"
 end

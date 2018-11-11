@@ -32,7 +32,7 @@ class Adoption
   def delete()
     sql = "DELETE FROM adoptions WHERE id = $1"
     values = [@id]
-    SqlRunner.run(sql values)
+    SqlRunner.run(sql, values)
   end
 
   def update()
