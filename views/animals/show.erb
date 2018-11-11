@@ -8,10 +8,7 @@
 <p>Sex: <%= @animal.sex %></p>
 <p>Admission Date: <%= @animal.admission_date %></p>
 <p>Availability: <%= @animal.availability %></p>
-<% if @animal.availability.downcase == "adopted" %>
-  <p>Owner: <a href="/owners/<%= @animal.owner['id'] %>"><%= @animal.owner %></a></p>
-<% end %>
-
+  <p>Owner: <a href="/owners/<%= @animal.owner_id %>"><%= @animal.owner_name %></a></p>
 <p>Description: <%= @animal.pet_description %></p>
 <a href="/animals/ <%= @animal.id %>/edit">Edit</a>
 

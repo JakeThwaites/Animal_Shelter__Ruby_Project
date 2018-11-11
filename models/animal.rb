@@ -79,11 +79,27 @@ class Animal
   end
 
   def owner_id()
-    sql = "SELECT owners.* FROM owners INNER JOIN adoptions ON owners.id = adoptions.owner_id WHERE adoptions.animal_id = $1;"
-    values = [@id]
-    owners = SqlRunner.run(sql, values)
-    id = owners.first()['id'].to_i
-    return id
+    if @availability.downcase == "adopted"
+      sql = "SELECT owners.* FROM owners INNER JOIN adoptions ON owners.id = adoptions.owner_id WHERE adoptions.animal_id = $1;"
+      values = [@id]
+      owners = SqlRunner.run(sql, values)
+      id = owners.first()['id'].to_i
+      return id
+    else
+      return nil
+    end
+  end
+
+  def owner_name()
+    if @availability.downcase == "adopted"
+      sql = "SELECT owners.* FROM owners INNER JOIN adoptions ON owners.id = adoptions.owner_id WHERE adoptions.animal_id = $1;"
+      values = [@id]
+      owners = SqlRunner.run(sql, values)
+      name = owners.first()['name'].to_s
+      return name
+    else
+      return nil
+    end
   end
 
   def add_pet_description(text)
