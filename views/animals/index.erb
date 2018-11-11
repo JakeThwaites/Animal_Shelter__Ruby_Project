@@ -2,11 +2,24 @@
 
 <h4><a href="animals/new">Add New Animal</a></h4>
 
-<h4><select class="species" name="species">
-  <% for animal in @animals %>
-  <option value="<%= animal.species %>"><%= animal.species %></option>
-  <% end %>
-</select><a href="animals/species/<%= animal.species %>">Sort by species</a></h4>
+<div id="top_nav">
+  <ul><% for species in @specieses %>
+    <li><a href="/animals/species/<%= species %>"><%= species %></a></li>
+    <% end %>
+  </ul>
+</div>
+
+<form action="/animals/species/<%= species %>" method="post">
+  <select name="species">
+    <% for species in @specieses%>
+    <option value="<%= species %>"><%= species %></option>
+    <% end %>
+  </select>
+
+  <input type="submit" value="select by species">
+</form>
+
+
 
 
 <div id="animal-wrapper">

@@ -8,7 +8,7 @@ also_reload( '../models/*' )
 
 get '/animals' do
   @animals = Animal.all()
-  species = params[:species]
+  @specieses = Animal.all_species()
   erb ( :"animals/index" )
 end
 
@@ -24,6 +24,7 @@ end
 
 get '/animals/species/:species' do
   @animals = Animal.find_by_species(params['species'])
+  @specieses = Animal.all_species()
   erb(:"animals/species")
 end
 
