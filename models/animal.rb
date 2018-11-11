@@ -24,6 +24,13 @@ class Animal
     return result.map { |animal| Animal.new(animal) }
   end
 
+  def self.find_by_availability(availability)
+    sql = "SELECT * FROM animals WHERE availability = $1"
+    values = [availability]
+    result = SqlRunner.run(sql, values)
+    return result.map { |animal| Animal.new(animal) }
+  end
+
   def self.find_by_species(species)
     sql = "SELECT * FROM animals WHERE species = $1"
     values = [species]

@@ -1,6 +1,8 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry-byebug' )
+require_relative( '../models/animal.rb' )
+require_relative( '../models/owner.rb' )
 require_relative( '../models/adoption.rb' )
 also_reload( '../models/*' )
 
@@ -21,6 +23,8 @@ end
 
 get '/adoptions/:id' do
   @adoption = Adoption.find_adoption_by_id(params['id'])
+  @owner = Owner.find_owner_by_id(params)
+  @animal = Animal.find_animal_by_id(params[@adoption.animal_id])
   erb(:"adoptions/show")
 end
 
