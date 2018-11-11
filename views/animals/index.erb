@@ -22,9 +22,11 @@
 
 
 
+
 <div id="animal-wrapper">
   <% for animal in @animals %>
   <div class="animal">
+    <img src="<%= animal.image_url%>" alt="A photo of <%= animal.name %>">
     <h3><%= animal.name %></h3>
     <p>Age: <%= animal.age %></p>
     <p>Species: <%= animal.species %></p>

@@ -16,7 +16,7 @@ animal1 = Animal.new({
   "admission_date" => '1992-04-19',
   "availability" => "available",
   "pet_description" => "Archie is a very good boy",
-  "image_url" => "https://www.nationalgeographic.com/content/dam/animals/thumbs/rights-exempt/mammals/d/domestic-dog_thumb.ngsversion.1484159404151.adapt.1900.1.jpg"})
+  "image_url" => "https://i.pinimg.com/236x/5c/88/a7/5c88a782d938fa8db4b18c4a4e696545--summer-haircuts-tibetan-terrier.jpg"})
 
 animal1.save()
 

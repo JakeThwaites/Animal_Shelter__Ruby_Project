@@ -7,8 +7,9 @@
   <div class="adoption">
     <h3><%= adoption.id %></h3>
     <% owner = Owner.find_owner_by_id(adoption.owner_id) %>
+    <% animal = Animal.find_animal_by_id(adoption.animal_id) %>
     <p>Owner: <%= owner.name %></p>
-    <p>Animal: <%= adoption.animal_id %></p>
+    <p>Animal: <%= animal.name %></p>
     <p>Adoption Date: <%= adoption.adoption_date %></p>
     <a href="adoptions/<%= adoption.id %>">View more info</a>
   </div>

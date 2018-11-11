@@ -1,8 +1,14 @@
 <h1>Information on a specific adoption</h1>
 
+<head>
+  <base href="/">
+</head>
 
-<p>Owner: <%= @adoption.owner_id %></p>
-<p>Animal: <%= @adoption.animal_id %></p>
+<% owner = Owner.find_owner_by_id(@adoption.owner_id) %>
+<% animal = Animal.find_animal_by_id(@adoption.animal_id) %>
+
+<p>Owner: <a href="owners/<%= owner.id%>"><%= owner.name %></a></p>
+<p>Animal: <a href="animals/<%= animal.id %>"><%= animal.name %></a></p>
 <p>Adoption Date: <%= @adoption.adoption_date %></p>
 <form action= "/adoptions/<%= @adoption.id %>/delete" method="post">
 <input type="submit" value="delete">
