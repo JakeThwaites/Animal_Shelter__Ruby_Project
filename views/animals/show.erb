@@ -2,6 +2,10 @@
 
 <h2><%= @animal.name %></h2>
 
+<div name="animal_photo">
+  <img src="<%= @animal.image_url %>" alt="A photo of <%= @animal.name %>">
+</div>
+
 <p>Age: <%= @animal.age %></p>
 <p>Species: <%= @animal.species %></p>
 <p>Breed: <%= @animal.breed %></p>

@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Animal
 
-  attr_reader :age, :species, :breed, :sex, :id, :admission_date, :pet_description
+  attr_reader :age, :species, :breed, :sex, :id, :admission_date, :pet_description, :image_url
   attr_accessor :name, :availability
 
   def initialize(options)
@@ -14,6 +14,7 @@ class Animal
     @admission_date = options["admission_date"]
     @availability = options["availability"]
     @pet_description = options["pet_description"] if options["pet_description"]
+    @image_url = options["image_url"] if options["image_url"]
     @id = options["id"] if options["id"]
   end
 
@@ -60,15 +61,15 @@ class Animal
   end
 
   def save()
-    sql = "INSERT INTO animals (name, age, species, breed, sex, admission_date, availability, pet_description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING ID"
-    values = [@name, @age, @species, @breed, @sex, @admission_date, @availability, @pet_description]
+    sql = "INSERT INTO animals (name, age, species, breed, sex, admission_date, availability, pet_description, image_url) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING ID"
+    values = [@name, @age, @species, @breed, @sex, @admission_date, @availability, @pet_description, @image_url]
     animal = SqlRunner.run(sql, values)
     @id = animal.first()['id'].to_i
   end
 
   def update()
-    sql = "UPDATE animals SET (name, age, species, breed, sex, admission_date, availability, pet_description) = ($1, $2, $3, $4, $5, $6, $7, $8) WHERE id = $9"
-    values = [@name, @age, @species, @breed, @sex, @admission_date, @availability, @pet_description, @id, ]
+    sql = "UPDATE animals SET (name, age, species, breed, sex, admission_date, availability, pet_description, image_url) = ($1, $2, $3, $4, $5, $6, $7, $8, $9) WHERE id = $10"
+    values = [@name, @age, @species, @breed, @sex, @admission_date, @availability, @pet_description, @image_url, @id,]
     SqlRunner.run(sql, values)
   end
 
@@ -87,25 +88,25 @@ class Animal
 
   def owner_id()
     if @availability.downcase == "adopted"
-      sql = "SELECT owners.* FROM owners INNER JOIN adoptions ON owners.id = adoptions.owner_id WHERE adoptions.animal_id = $1;"
+      sql = "SELECT owners.* FROM owners INNER JOIN adoptions ON owners.id = adoptions.owner_id WHERE adoptions.animal_id = $1"
       values = [@id]
       owners = SqlRunner.run(sql, values)
       id = owners.first()['id'].to_i
       return id
     else
-      return nil
+      return ""
     end
   end
 
   def owner_name()
     if @availability.downcase == "adopted"
-      sql = "SELECT owners.* FROM owners INNER JOIN adoptions ON owners.id = adoptions.owner_id WHERE adoptions.animal_id = $1;"
+      sql = "SELECT owners.* FROM owners INNER JOIN adoptions ON owners.id = adoptions.owner_id WHERE adoptions.animal_id = $1"
       values = [@id]
       owners = SqlRunner.run(sql, values)
       name = owners.first()['name'].to_s
       return name
     else
-      return nil
+      return ""
     end
   end
 

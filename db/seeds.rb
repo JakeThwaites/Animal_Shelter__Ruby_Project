@@ -15,7 +15,8 @@ animal1 = Animal.new({
   "sex" => "Male",
   "admission_date" => '1992-04-19',
   "availability" => "available",
-  "pet_description" => "Archie is a very good boy"})
+  "pet_description" => "Archie is a very good boy",
+  "image_url" => "https://www.nationalgeographic.com/content/dam/animals/thumbs/rights-exempt/mammals/d/domestic-dog_thumb.ngsversion.1484159404151.adapt.1900.1.jpg"})
 
 animal1.save()
 
@@ -27,7 +28,8 @@ animal2 = Animal.new({
     "sex" => "Male",
     "admission_date" => '2012-12-20',
     "availability" => "available",
-    "pet_description" => "Walter is a very good boy" })
+    "pet_description" => "Walter is a very good boy",
+    "image_url" => "https://cbslocal-uploads.storage.googleapis.com/captures/DAE/7D2/DAE7D20C4B6741D89435FCEC5B69A9EA.jpg" })
 
 animal2.save()
 
@@ -38,7 +40,8 @@ animal3 = Animal.new({
     "breed" => "black",
     "sex" => "Male",
     "admission_date" => '2012-12-05',
-    "availability" => "available" })
+    "availability" => "available",
+    "image_url" => "https://www.thehappycatsite.com/wp-content/uploads/2017/09/black-and-white2.jpg" })
 
 animal3.save()
 
