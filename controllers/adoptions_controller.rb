@@ -12,6 +12,8 @@ get '/adoptions' do
 end
 
 get '/adoptions/new' do
+  @animals = Animal.find_by_availability('available')
+  @owners = Owner.all()
   erb(:"adoptions/new")
 end
 
@@ -23,8 +25,8 @@ end
 
 get '/adoptions/:id' do
   @adoption = Adoption.find_adoption_by_id(params['id'])
-  @owner = Owner.find_owner_by_id(params)
-  @animal = Animal.find_animal_by_id(params[@adoption.animal_id])
+  # @owner = Owner.find_owner_by_id(params)
+  # @animal = Animal.find_animal_by_id(params[@adoption.animal_id])
   erb(:"adoptions/show")
 end
 
