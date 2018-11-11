@@ -9,6 +9,10 @@
 <p>City: <%= @owner.city %></p>
 <p>Post Code: <%= @owner.post_code %></p>
 
+<% for animal in @owner.adopted_animals%>
+  <p>Adopted Animal:<a href="/animals/<%= @owner.adopted_animals__id %>"><%= @owner.adopted_animals__names %></a></p>
+<% end %>
+
 <a href="/owners/ <%= @owner.id %>/edit">Edit</a>
 
 <form action="/owners/<%= @owner.id %>/delete" method="post">

@@ -55,6 +55,22 @@ class Owner
     return animals.map { |animal| Animal.new(animal) }
   end
 
+  def adopted_animals__names()
+    sql = "SELECT animals.* FROM animals INNER JOIN adoptions ON animals.id = adoptions.animal_id WHERE adoptions.owner_id = $1"
+    values = [@id]
+    animals = SqlRunner.run(sql, values)
+    name = animals.first()['name'].to_s
+    return name
+  end
+
+  def adopted_animals__id()
+    sql = "SELECT animals.* FROM animals INNER JOIN adoptions ON animals.id = adoptions.animal_id WHERE adoptions.owner_id = $1"
+    values = [@id]
+    animals = SqlRunner.run(sql, values)
+    id = animals.first()['id'].to_i
+    return id
+  end
+
   def adopt_an_animal(animal, date)
     adoption = Adoption.new({"owner_id" => @id, "animal_id" => animal.id, "adoption_date" => date})
     adoption.save()
