@@ -52,10 +52,19 @@
   height: 20em;
 }
 
+.animal-info--show {
+  display: flex;
+}
+
 .animal-url--show {
   border-radius: 8px;
   width: 20em;
   height: 20em;
+}
+
+#image--show {
+  height: 100%;
+  width: 100%;
 }
 
 
