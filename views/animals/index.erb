@@ -9,6 +9,13 @@
   </ul>
 </div>
 
+<div id="availability_nav">
+  <ul>Sort by availability
+    <li><a href="/animals/available">Available</a></li>
+  </ul>
+</div>
+
+
 <form action="/animals/species/<%= species %>" method="post">
   <select name="species">
     <% for species in @specieses%>
@@ -18,6 +25,7 @@
 
   <input type="submit" value="select by species">
 </form>
+
 
 
 
