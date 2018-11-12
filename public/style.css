@@ -38,13 +38,31 @@
 
 .animal-container {
   display: flex;
-  flex-direction: column;
   flex: 40%;
   padding: 20px;
+  border: 1;
+  border: 3px solid #1abc9c;
+  text-align: right;
+  justify-content: space-between;
 }
 
 .animal-url--index {
   border-radius: 8px;
   width: 20em;
   height: 20em;
+}
+
+.animal-url--show {
+  border-radius: 8px;
+  width: 20em;
+  height: 20em;
+}
+
+
+.animal-text-box--show {
+  text-align: right;
+}
+
+.animal-text {
+
 }

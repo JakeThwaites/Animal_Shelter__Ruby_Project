@@ -22,11 +22,18 @@
   <% for animal in @animals %>
   <div class="animal-container">
     <img class="animal-url--index"src="<%= animal.image_url%>" alt="A photo of <%= animal.name %>">
-    <h3><%= animal.name %></h3>
+
+    <div class="animal-text">
+
+
+    <h2><%= animal.name %></h2>
     <p>Age: <%= animal.age %></p>
     <p>Species: <%= animal.species %></p>
     <p>Availability: <%= animal.availability %></p>
     <a href="animals/<%= animal.id %>">View more info</a>
+
+</div>
+
   </div>
   <% end %>
 </div>

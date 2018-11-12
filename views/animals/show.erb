@@ -1,12 +1,12 @@
-<h1>This is lots of information about the individual pet</h1>
-
 <h2><%= @animal.name %></h2>
 
 
 
-<div name="animal_photo">
+<div class="animal-url--show">
   <img src="<%= @animal.image_url %>" alt="A photo of <%= @animal.name %>">
 </div>
+
+<div class="animal-text-box--show">
 
 <p>Age: <%= @animal.age %></p>
 <p>Species: <%= @animal.species %></p>
@@ -17,6 +17,9 @@
   <p>Owner: <a href="/owners/<%= @animal.owner_id %>"><%= @animal.owner_name %></a></p>
 <p>Description: <%= @animal.pet_description %></p>
 <a href="/animals/ <%= @animal.id %>/edit">Edit</a>
+
+</div>
+
 
 <form action="/animals/ <%= @animal.id %>/delete" method="post">
 <input type="submit" value="delete">
