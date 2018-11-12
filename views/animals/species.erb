@@ -1,11 +1,15 @@
+<link rel="stylesheet" href="/style.css">
+
 <h1>Look at all the animals!</h1>
+
+
 
 <h4><a href="animals">Add New Animal</a></h4>
 
 <div id="animal-wrapper">
   <% for animal in @animals %>
   <div class="animal">
-    <img src="<%= animal.image_url %>" alt="A photo of <%= animal.name %>">
+    <img class="animal-url--index" src="<%= animal.image_url %>" alt="A photo of <%= animal.name %>">
     <h3><%= animal.name %></h3>
     <p>Age: <%= animal.age %></p>
     <p>Species: <%= animal.species %></p>

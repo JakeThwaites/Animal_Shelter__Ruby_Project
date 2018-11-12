@@ -12,6 +12,7 @@
 <div id="availability_nav">
   <ul>Sort by availability
     <li><a href="/animals/available">Available</a></li>
+    <li><a href="/animals/adopted">Adopted</a></li>
   </ul>
 </div>
 
@@ -31,10 +32,10 @@
 
 
 
-<div id="animal-wrapper">
+<div class="flex-container" id="animal-wrapper">
   <% for animal in @animals %>
-  <div class="animal">
-    <img src="<%= animal.image_url%>" alt="A photo of <%= animal.name %>">
+  <div class="animal-container">
+    <img class="animal-url--index" src="<%= animal.image_url%>" alt="A photo of <%= animal.name %>">
     <h3><%= animal.name %></h3>
     <p>Age: <%= animal.age %></p>
     <p>Species: <%= animal.species %></p>

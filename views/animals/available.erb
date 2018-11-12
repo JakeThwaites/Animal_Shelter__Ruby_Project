@@ -2,6 +2,13 @@
 
 <h4><a href="animals/new">Add New Animal</a></h4>
 
+<div id="availability_nav">
+  <ul>Sort by availability
+    <li><a href="/animals/available">Available</a></li>
+    <li><a href="/animals/adopted">Adopted</a></li>
+  </ul>
+</div>
+
 <div id="animal-wrapper">
   <% for animal in @animals %>
   <div class="animal">

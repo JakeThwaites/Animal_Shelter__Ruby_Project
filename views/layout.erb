@@ -4,14 +4,20 @@
     <base href="/">
     <meta charset="utf-8">
     <title>Jake's Animal Shelter</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
-  <body>
-    <nav id="menu">
-      <li class="menu-item"><a href="/animals">Animals</a></li>
-      <li class="menu-item"><a href="/owners">Owners</a></li>
-      <li class="menu-item"><a href="/adoptions">Adoptions</a></li>
-    </nav>
-    <%= yield %>
-  </body>
+  <div class="header">
+    <body>
+      <nav id="menu">
+        <li class="menu-item"><a href="/animals">Animals</a></li>
+        <li class="menu-item"><a href="/owners">Owners</a></li>
+        <li class="menu-item"><a href="/adoptions">Adoptions</a></li>
+      </nav>
+    
+    </body>
+  </div>
+
+  <div class="body">
+      <%= yield %>
+  </div>
 </html>
