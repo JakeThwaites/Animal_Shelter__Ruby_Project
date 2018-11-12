@@ -2,6 +2,15 @@
   display: inline;
 }
 
+.logo {
+  border-radius: 50%;
+  float: left;
+  width: 5em;
+  height: 5em;
+  position: relative;
+  top: -35px;
+}
+
 .header {
   padding: 60px;
   text-align: center;
