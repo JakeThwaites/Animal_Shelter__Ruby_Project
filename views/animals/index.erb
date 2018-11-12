@@ -17,25 +17,11 @@
 </div>
 
 
-<form action="/animals/species/<%= species %>" method="post">
-  <select name="species">
-    <% for species in @specieses%>
-    <option value="<%= species %>"><%= species %></option>
-    <% end %>
-  </select>
 
-  <input type="submit" value="select by species">
-</form>
-
-
-
-
-
-
-<div class="flex-container" id="animal-wrapper">
+<div class="flex-container">
   <% for animal in @animals %>
   <div class="animal-container">
-    <img class="animal-url--index" src="<%= animal.image_url%>" alt="A photo of <%= animal.name %>">
+    <img class="animal-url--index"src="<%= animal.image_url%>" alt="A photo of <%= animal.name %>">
     <h3><%= animal.name %></h3>
     <p>Age: <%= animal.age %></p>
     <p>Species: <%= animal.species %></p>

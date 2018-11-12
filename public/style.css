@@ -8,25 +8,39 @@
   width: 5em;
   height: 5em;
   position: relative;
-  top: -35px;
 }
 
 .header {
-  padding: 60px;
-  text-align: center;
+  padding: 40px;
   background: #1abc9c;
   color: black;
   font-size: 20px;
+  position: relative;
+  display: flex;
+}
+
+#menu {
+  display: flex;
+  align-items: bottom;
+}
+
+.menu-item {
+  position: relative;
+  bottom: 5px;
+  padding: 20px;
 }
 
 .flex-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .animal-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex: 40%;
+  padding: 20px;
 }
 
 .animal-url--index {
