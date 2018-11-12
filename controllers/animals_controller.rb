@@ -33,6 +33,11 @@ get '/animals/available' do
   erb(:"animals/available")
 end
 
+get '/animals/adopted' do
+  @animals = Animal.find_by_availability('Adopted')
+  erb(:"animals/adopted")
+end
+
 get '/animals/:id' do
   @animal = Animal.find_animal_by_id(params['id'])
   erb(:"/animals/show")
