@@ -53,7 +53,7 @@
 #new-animal-button {
   font: bold Arial;
   text-decoration: none;
-  background-color: #979B9E;
+  background-color: silver;
   color: black;
   padding: 2px 6px 2px 6px;
   border-radius: 7%;
@@ -61,7 +61,7 @@
 
 #new-animal-button:hover {
     color: white;
-    background-color: #A6AAAE;
+    background-color: silver;
 }
 
 
@@ -298,7 +298,7 @@
 #submit-button {
   font-size: 110%;
   border-radius: 4px;
-  background-color: #E92B0E;
+  background-color: #silver;
   cursor: pointer;
   font-family: Helvetica;
 }
