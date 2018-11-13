@@ -18,12 +18,14 @@
   background: #1abc9c;
   color: black;
   font-size: 20px;
+  font-family: Arial;
+  text-decoration: none;
   display: flex;
 }
 
 #menu {
   display: flex;
-
+  cursor: pointer;
 }
 
 .menu-item {
@@ -234,6 +236,7 @@
 
 .form-new--title {
   text-align: center;
+  font-family: Arial;
 }
 
 .form--new {
@@ -245,19 +248,29 @@
   max-width: 90vw;
 }
 
-.form--new input {
-
-}
 
 .form-el {
   font-size: 60;
 }
 
 .form-el label {
-  font-style: bold;
   display: block;
+  font-size: 20px;
+  font-family: Helvetica;
 }
 
+.form-el input {
+  height: 30px;
+  width: 300px;
+  font-size: 18px;
+  font-family: Arial;
+}
+
+.form-el select {
+  height: 30px;
+  width: 300px;
+  font-size: 18px;
+}
 
 #pet-description {
   height: 200px;
@@ -271,8 +284,20 @@
 
 #male {
   display: inline;
+  width: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #female {
   display: inline;
+  width: 40px;
+}
+
+#submit-button {
+  font-size: 110%;
+  border-radius: 4px;
+  background-color: #E92B0E;
+  cursor: pointer;
+  font-family: Helvetica;
 }
