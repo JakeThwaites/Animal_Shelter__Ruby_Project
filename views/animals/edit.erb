@@ -30,8 +30,11 @@
       </div>
 
       <div class="form-el">
-        <label for="sex">Sex:</label>
-        <input type="text" name="sex" id="sex" value="<%= @animal.sex %>"/>
+        <label id="sex-label" for="sex">Sex:</label>
+
+        <label id="male" for="male">Male<input type="radio" name="sex" id="male" checked></label>
+
+        <label for="female" id="female">Female<input type="radio" name="sex" value="female" id="female"></label>
       </div>
 
       <div class="form-el">
@@ -41,7 +44,11 @@
 
       <div class="form-el">
         <label for="availability">Availability:</label>
-        <input type="text" name="availability" id="availability" value="<%= @animal.availability %>"/>
+        <select name="availability">
+        <option value="Available">Ready For Adoption</option>
+        <option value="not_ready_for_adoption">Not Ready For Adoption</option>
+        <option value="Adopted">Adopted</option>
+        </select>
       </div>
 
 
