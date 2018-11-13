@@ -194,6 +194,7 @@
 
 .animal-text-box--show {
   flex: 2 1 auto;
+
 }
 
 #edit-button {
@@ -212,7 +213,16 @@
 }
 
 #delete-button {
+  padding: 10px;
+}
+
+#delete-button--button {
   font-size: 110%;
   border-radius: 4px;
-  padding: 10px;
+  background-color: #E92B0E;
+}
+
+#delete-button--button:hover {
+  background-color: #F43F3F;
+  cursor: pointer;
 }
