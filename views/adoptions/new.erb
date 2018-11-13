@@ -1,33 +1,48 @@
-<h1>Create a new adoption</h1>
-<form action="/adoptions" method="post">
 
-
-<div class="form-el">
-  <label for="animal_select">Select Animal:</label>
-  <select name="animal_id" id="animal_select">
-    <% for animal in @animals %>
-        <option value=<%= animal.id %>><%= animal.name.capitalize %></option>
-    <% end %>
-  </select>
-</div>
-
-<div class="form-el">
-  <label for="owner_select">Select Owner:</label>
-  <select name="owner_id" id="owner_select">
-    <% for owner in @owners %>
-        <option value=<%= owner.id %>><%= owner.name.capitalize %></option>
-    <% end %>
-  </select>
-
-  <div class="form-el">
-    <label for="adoption_date">Adoption Date:</label>
-    <input type="date" name="adoption_date" id="adoption_date">
-  </div>
-
-  <div class="form-el">
-    <input type="submit" value="Submit">
-  </div>
+<div class="form-new--title">
+  <h1>Create a new adoption</h1>
 </div>
 
 
-</form>
+<div class="container-form--new">
+
+  <div class="form--new">
+
+
+    <form action="/adoptions" method="post">
+
+
+    <div class="form-el">
+      <label for="animal_select">Select Animal:</label>
+      <select name="animal_id" id="animal_select">
+        <% for animal in @animals %>
+            <option value=<%= animal.id %>><%= animal.name.capitalize %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-el">
+      <label for="owner_select">Select Owner:</label>
+      <select name="owner_id" id="owner_select">
+        <% for owner in @owners %>
+            <option value=<%= owner.id %>><%= owner.name.capitalize %></option>
+        <% end %>
+      </select>
+
+      <div class="form-el">
+        <label for="adoption_date">Adoption Date:</label>
+        <input type="date" name="adoption_date" id="adoption_date">
+      </div>
+
+      <br>
+
+      <div class="form-el">
+        <input type="submit" value="Submit">
+      </div>
+    </div>
+
+
+    </form>
+
+  </div>
+</div>

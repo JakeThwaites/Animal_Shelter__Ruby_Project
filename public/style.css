@@ -508,3 +508,20 @@
 #owner-info--h1 {
   text-align: center;
 }
+
+
+
+
+
+/* owner index page */
+
+
+.owner  {
+  border: 1px solid grey;
+  font-family: Arial;
+}
+
+.adoption {
+  border: 1px solid grey;
+  font-family: Arial;
+}
