@@ -1,53 +1,59 @@
-<h1>Edit</h1>
 
-<form method="POST" action="/animals/<%= @animal.id %>">
-  <div class="form-wrapper">
 
-    <div class="form-el">
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" value="<%= @animal.name %>"/>
-    </div>
+<h1 id="edit-heading">Edit</h1>
 
-    <div class="form-el">
-      <label for="age">Age:</label>
-      <input type="text" name="age" id="age" value="<%= @animal.age %>"/>
-    </div>
 
-    <div class="form-el">
-      <label for="species">Species:</label>
-      <input type="text" name="species" id="species" value="<%= @animal.species %>"/>
-    </div>
 
-    <div class="form-el">
-      <label for="breed">Breed:</label>
-      <input type="text" name="breed" id="breed" value="<%= @animal.breed %>"/>
-    </div>
 
-    <div class="form-el">
-      <label for="sex">Sex:</label>
-      <input type="text" name="sex" id="sex" value="<%= @animal.sex %>"/>
-    </div>
 
-    <div class="form-el">
-      <label for="admission_date">Admission Date:</label>
-      <input type="date" name="admission_date" id="admission_date" value="<%= @animal.admission_date %>"/>
-    </div>
+  <form name="edit-form" method="POST" action="/animals/<%= @animal.id %>">
+    <div class="form-wrapper">
 
-    <div class="form-el">
-      <label for="availability">Availability:</label>
-      <input type="text" name="availability" id="availability" value="<%= @animal.availability %>"/>
-    </div>
+      <div class="form-el">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= @animal.name %>"/>
+      </div>
 
-    <div class="form-el">
-      <label for="pet_description">Description:</label>
-      <input type="text" name="pet_description" id="pet_description" value="<%= @animal.pet_description %>"/>
-    </div>
+      <div class="form-el">
+        <label for="age">Age:</label>
+        <input type="text" name="age" id="age" value="<%= @animal.age %>"/>
+      </div>
 
-    <div class="form-el">
-      <label for="image_url">Image Url:</label>
-      <input type="text" name="image_url" id="image_url" value="<%= @animal.image_url %>"/>
-    </div>
+      <div class="form-el">
+        <label for="species">Species:</label>
+        <input type="text" name="species" id="species" value="<%= @animal.species %>"/>
+      </div>
 
-    <input type="submit" value="Submit">
+      <div class="form-el">
+        <label for="breed">Breed:</label>
+        <input type="text" name="breed" id="breed" value="<%= @animal.breed %>"/>
+      </div>
 
-  </form>
+      <div class="form-el">
+        <label for="sex">Sex:</label>
+        <input type="text" name="sex" id="sex" value="<%= @animal.sex %>"/>
+      </div>
+
+      <div class="form-el">
+        <label for="admission_date">Admission Date:</label>
+        <input type="date" name="admission_date" id="admission_date" value="<%= @animal.admission_date %>"/>
+      </div>
+
+      <div class="form-el">
+        <label for="availability">Availability:</label>
+        <input type="text" name="availability" id="availability" value="<%= @animal.availability %>"/>
+      </div>
+
+
+      <label id="description-label" for="pet_description">Description</label>
+      <textarea id="pet-description-box" name="pet_description" rows="8" cols="80"><%= @animal.pet_description%></textarea>
+
+
+      <div class="form-el">
+        <label for="image_url">Image Url:</label>
+        <input type="text" name="image_url" id="image_url" value="<%= @animal.image_url %>"/>
+      </div>
+
+      <input type="submit" value="Submit">
+
+    </form>

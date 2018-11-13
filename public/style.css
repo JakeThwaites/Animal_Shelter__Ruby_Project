@@ -301,3 +301,47 @@
   cursor: pointer;
   font-family: Helvetica;
 }
+
+
+
+
+
+/*  animals edit page   */
+
+
+#edit-heading {
+  text-align: center;
+}
+
+.form-wrapper {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  background-color: #D7D2D2;
+
+}
+
+#pet-description-box {
+  height: 100px;
+  width: 300px;
+  font-size: 16px;
+  font-family: Arial;
+}
+
+#description-label {
+  display: block;
+  font-size: 20px;
+  font-family: Arial;
+}
+
+/*
+<input id="pet-description-box" type="text" name="pet_description" id="pet_description" value="<%= @animal.pet_description %>"/>
+
+
+<div class="form-el">
+  <label for="pet_description">Description:</label>
+  <input id="pet-description-box" type="text" name="pet_description" id="pet_description" value="<%= @animal.pet_description %>"/>
+</div>
