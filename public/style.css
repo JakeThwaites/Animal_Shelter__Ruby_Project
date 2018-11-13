@@ -11,17 +11,19 @@
 }
 
 .header {
-  padding: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 10px;
   background: #1abc9c;
   color: black;
   font-size: 20px;
-  position: relative;
   display: flex;
 }
 
 #menu {
   display: flex;
-  align-items: bottom;
+
 }
 
 .menu-item {
@@ -45,6 +47,23 @@
   text-align: right;
   justify-content: space-between;
 }
+
+#new-animal-button {
+  font: bold Arial;
+  text-decoration: none;
+  background-color: #979B9E;
+  color: black;
+  padding: 2px 6px 2px 6px;
+  border-radius: 7%;
+}
+
+#new-animal-button:hover {
+    color: white;
+    background-color: #A6AAAE;
+}
+
+
+
 
 .animal-url--index {
   border-radius: 8px;
@@ -74,4 +93,126 @@
 
 .animal-text {
 
+}
+
+.top-nav--animals {
+  display: inline;
+  background-color: grey;
+}
+
+.species-nav {
+  position: relative;
+  display: inline-block;
+
+}
+
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #979B9E;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #A6AAAE;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+/*   animals/show */
+
+.animal-info--show {
+  display: flex;
+}
+
+.animal-url--show {
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+.animal-text-box--show {
+  flex: 2 1 auto;
+}
+
+#edit-button {
+  font-size: 110%;
+  border-radius: 4px;
+  background-color: #E0E3E5;
+}
+
+#edit-button-text {
+  text-decoration: none;
+  color: #393D42;
+}
+
+#edit-button:hover {
+  background-color: #E5E8EA;
+}
+
+#delete-button {
+  font-size: 110%;
+  border-radius: 4px;
+  padding: 10px;
 }

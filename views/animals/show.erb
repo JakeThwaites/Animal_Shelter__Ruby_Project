@@ -10,7 +10,7 @@
 
   <div class="animal-text-box--show">
 
-  <p>Age: <%= @animal.age %></p>
+  <p> Age: <%= @animal.age %></p>
   <p>Species: <%= @animal.species %></p>
   <p>Breed: <%= @animal.breed %></p>
   <p>Sex: <%= @animal.sex %></p>
@@ -18,14 +18,14 @@
   <p>Availability: <%= @animal.availability %></p>
     <p>Owner: <a href="/owners/<%= @animal.owner_id %>"><%= @animal.owner_name %></a></p>
   <p>Description: <%= @animal.pet_description %></p>
-  <a href="/animals/ <%= @animal.id %>/edit">Edit</a>
+  <button class="pure-button pure-button-active" id="edit-button" type="button"><a id="edit-button-text" href="/animals/<%=  @animal.id%>/edit">Edit</a></button>
 
   </div>
 
 </div>
 
 
-<form action="/animals/ <%= @animal.id %>/delete" method="post">
+<form id="delete-button" action="/animals/ <%= @animal.id %>/delete" method="post">
 <input type="submit" value="delete">
 
 </form>
