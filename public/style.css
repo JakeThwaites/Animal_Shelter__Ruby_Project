@@ -230,10 +230,49 @@
 
 /* New Animal form  */
 
+
+
 .form-new--title {
   text-align: center;
 }
 
 .form--new {
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  background-color: #D7D2D2;
+  max-width: 90vw;
+}
+
+.form--new input {
+
+}
+
+.form-el {
+  font-size: 60;
+}
+
+.form-el label {
+  font-style: bold;
+  display: block;
+}
+
+
+#pet-description {
+  height: 200px;
+  width: 300px;
+  text-align: center;
+}
+
+#sex-label {
+  display: inline;
+}
+
+#male {
+  display: inline;
+}
+
+#female {
+  display: inline;
 }

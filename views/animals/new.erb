@@ -1,66 +1,76 @@
 
 <div class="form-new--title">
-  <h1>Add New Animal</h1>
+  <h1><span>Add New Animal</span></h1>
 </div>
 
-<form class="form--new" action="/animals" method="post">
+<div class="container-form--new">
 
-  <div class="form-el">
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name">
+
+
+  <div class="form--new">
+
+    <form action="/animals" method="post">
+
+      <div class="form-el">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+      </div>
+
+      <div class="form-el">
+        <label for="number">Age:</label>
+        <input type="text" name="age" id="age">
+      </div>
+
+      <div class="form-el">
+        <label for="species">Species:</label>
+        <input type="text" name="species" id="species">
+      </div>
+
+      <div class="form-el">
+        <label for="breed">Breed:</label>
+        <input type="text" name="breed" id="breed">
+      </div>
+
+      <div class="form-el">
+        <label id="sex-label" for="sex">Sex:</label>
+        <input type="radio" name="sex" id="male" checked>
+        <label id="male" for="male">Male</label>
+
+        <input type="radio" name="sex" value="female" id="female">
+        <label for="female" id="female">Female</label>
+      </div>
+
+      <div class="form-el">
+        <label for="admission_date">Admission Date:</label>
+        <input type="date" name="admission_date" id="admission_date">
+      </div>
+
+      <div class="form-el">
+        <label for="availability">Availability:</label>
+        <select name="availability">
+        <option value="available">Ready For Adoption</option>
+        <option value="not_ready_for_adoption">Not Ready For Adoption</option>
+        <option value="Adopted">Adopted</option>
+        </select>
+      </div>
+
+      <div class="form-el">
+        <label for="image_url">Image URL:</label>
+        <input type="text" name="image_url" id="image_url">
+      </div>
+
+      <div class="form-el">
+        <label for="pet_description">Description:</label>
+        <input type="text" name="pet_description" id="pet-description" placeholder="Write something about the pet">
+      </div>
+
+      <div class="form-el">
+        <input type="submit" value="Submit"/>
+      </div>
+
+
+    </form>
+
   </div>
 
-  <div class="form-el">
-    <label for="number">Age:</label>
-    <input type="text" name="age" id="age">
-  </div>
-
-  <div class="form-el">
-    <label for="species">Species:</label>
-    <input type="text" name="species" id="species">
-  </div>
-
-  <div class="form-el">
-    <label for="breed">Breed:</label>
-    <input type="text" name="breed" id="breed">
-  </div>
-
-  <div class="form-el">
-    <label for="sex">Sex:</label>
-    <input type="radio" name="sex" id="male" checked>
-    <label for="male">Male</label>
-
-    <input type="radio" name="sex" value="female">
-    <label for="female">Female</label>
-  </div>
-
-  <div class="form-el">
-    <label for="admission_date">Admission Date:</label>
-    <input type="date" name="admission_date" id="admission_date">
-  </div>
-
-  <div class="form-el">
-    <label for="availability">Availability:</label>
-    <select name="availability">
-    <option value="available">Ready For Adoption</option>
-    <option value="not_ready_for_adoption">Not Ready For Adoption</option>
-    <option value="Adopted">Adopted</option>
-    </select>
-  </div>
-
-  <div class="form-el">
-    <label for="image_url">Image URL:</label>
-    <input type="text" name="image_url" id="image_url">
-  </div>
-
-  <div class="form-el">
-    <label for="pet_description">Description:</label>
-    <input type="text" name="pet_description" id="pet_description" placeholder="Write something about the pet">
-  </div>
-
-  <div class="form-el">
-    <input type="submit" value="Submit"/>
-  </div>
-
-
-</form>
+</div>
