@@ -346,11 +346,152 @@
   font-family: Helvetica;
 }
 
-/*
-<input id="pet-description-box" type="text" name="pet_description" id="pet_description" value="<%= @animal.pet_description %>"/>
 
 
-<div class="form-el">
-  <label for="pet_description">Description:</label>
-  <input id="pet-description-box" type="text" name="pet_description" id="pet_description" value="<%= @animal.pet_description %>"/>
-</div>
+/* Animals availability pages   */
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.animal-container {
+  display: flex;
+  flex: 40%;
+  padding: 20px;
+  border: 1;
+  border: 3px solid #1abc9c;
+  text-align: right;
+  justify-content: space-between;
+}
+
+#new-animal-button {
+  font: bold Arial;
+  text-decoration: none;
+  background-color: #979B9E;
+  color: black;
+  padding: 2px 6px 2px 6px;
+  border-radius: 7%;
+}
+
+#new-animal-button:hover {
+    color: white;
+    background-color: #A6AAAE;
+}
+
+
+
+
+.animal-url--index {
+  border-radius: 8px;
+  width: 20em;
+  height: 20em;
+}
+
+.animal-info--show {
+  display: flex;
+}
+
+.animal-url--show {
+  border-radius: 8px;
+  width: 20em;
+  height: 20em;
+}
+
+#image--show {
+  height: 100%;
+  width: 100%;
+}
+
+
+.animal-text-box--show {
+  text-align: right;
+}
+
+.animal-text {
+
+}
+
+.top-nav--animals {
+  display: inline;
+  background-color: grey;
+}
+
+.species-nav {
+  position: relative;
+  display: inline-block;
+
+}
+
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #979B9E;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #A6AAAE;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
