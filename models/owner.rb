@@ -8,12 +8,12 @@ class Owner
   attr_reader :name, :age, :id, :contact_number, :address_1, :address_2, :city, :post_code
 
   def initialize(options)
-    @name = options['name']
+    @name = options['name'].capitalize
     @age = options['age']
     @contact_number = options['contact_number']
     @address_1 = options['address_1']
     @address_2 = options['address_2'] if options['address_2']
-    @city = options['city'] if options['city']
+    @city = options['city'].capitalize if options['city']
     @post_code = options['post_code']
     @id = options['id'] if options['id']
   end

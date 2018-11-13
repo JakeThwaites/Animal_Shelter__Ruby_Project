@@ -6,13 +6,13 @@ class Animal
   attr_accessor :name, :availability
 
   def initialize(options)
-    @name = options["name"]
+    @name = options["name"].capitalize
     @age = options["age"]
-    @species = options["species"]
-    @breed = options["breed"]
-    @sex = options["sex"]
+    @species = options["species"].capitalize
+    @breed = options["breed"].capitalize
+    @sex = options["sex"].capitalize
     @admission_date = options["admission_date"]
-    @availability = options["availability"]
+    @availability = options["availability"].capitalize
     @pet_description = options["pet_description"] if options["pet_description"]
     @image_url = options["image_url"] if options["image_url"]
     @id = options["id"] if options["id"]

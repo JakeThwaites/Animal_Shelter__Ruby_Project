@@ -29,7 +29,7 @@ get '/animals/species/:species' do
 end
 
 get '/animals/available' do
-  @animals = Animal.find_by_availability('available')
+  @animals = Animal.find_by_availability('Available')
   erb(:"animals/available")
 end
 

@@ -12,7 +12,7 @@ get '/adoptions' do
 end
 
 get '/adoptions/new' do
-  @animals = Animal.find_by_availability('available')
+  @animals = Animal.find_by_availability('Available')
   @owners = Owner.all()
   erb(:"adoptions/new")
 end
