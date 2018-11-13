@@ -226,3 +226,14 @@
   background-color: #F43F3F;
   cursor: pointer;
 }
+
+
+/* New Animal form  */
+
+.form-new--title {
+  text-align: center;
+}
+
+.form--new {
+  text-align: center;
+}
