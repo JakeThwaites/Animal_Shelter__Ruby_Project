@@ -272,10 +272,11 @@
   font-size: 18px;
 }
 
-#pet-description {
+#pet-description--new {
   height: 200px;
   width: 300px;
-  text-align: center;
+  font-size: 18px;
+  font-family: Arial;
 }
 
 #sex-label {
@@ -335,6 +336,14 @@
   display: block;
   font-size: 20px;
   font-family: Arial;
+}
+
+#submit-button--edit {
+  font-size: 110%;
+  border-radius: 4px;
+  background-color: #B2B1B1;
+  cursor: pointer;
+  font-family: Helvetica;
 }
 
 /*
