@@ -495,3 +495,16 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+/* owner show */
+
+.owner-text-box--show {
+  text-align: center;
+  font-size: 18px;
+  font-family: Arial;
+}
+
+#owner-info--h1 {
+  text-align: center;
+}

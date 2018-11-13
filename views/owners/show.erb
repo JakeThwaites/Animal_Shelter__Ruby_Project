@@ -1,21 +1,28 @@
-<h1>Info on the Owner</h1>
 
-<h2><%= @owner.name %></h2>
 
-<p>Age: <%= @owner.age %></p>
-<p>Contact Number <%= @owner.contact_number %></p>
-<p>Address 1: <%= @owner.address_1 %></p>
-<p>Address 2: <%= @owner.address_2 %></p>
-<p>City: <%= @owner.city %></p>
-<p>Post Code: <%= @owner.post_code %></p>
+<h1 id="owner-info--h1">Info on the Owner</h1>
 
-<% for animal in @owner.adopted_animals%>
-  <p>Adopted Animal: <a href="/animals/<%= @owner.adopted_animals__id %>"><%= @owner.adopted_animals__names %></a></p>
-<% end %>
+<div class="owner-text-box--show">
 
-<a href="/owners/ <%= @owner.id %>/edit">Edit</a>
 
-<form action="/owners/<%= @owner.id %>/delete" method="post">
-<input type="submit" value="delete">
+  <h2><%= @owner.name %></h2>
 
-</form>
+  <p>Age: <%= @owner.age %></p>
+  <p>Contact Number <%= @owner.contact_number %></p>
+  <p>Address 1: <%= @owner.address_1 %></p>
+  <p>Address 2: <%= @owner.address_2 %></p>
+  <p>City: <%= @owner.city %></p>
+  <p>Post Code: <%= @owner.post_code %></p>
+
+  <% for animal in @owner.adopted_animals%>
+    <p>Adopted Animal: <a href="/animals/<%= @owner.adopted_animals__id %>"><%= @owner.adopted_animals__names %></a></p>
+  <% end %>
+
+    <button class="pure-button pure-button-active" id="edit-button" type="button"><a id="edit-button-text" href="/owners/<%=  @owner.id%>/edit">Edit</a></button>
+
+  <form id="delete-button" action="/owners/<%= @owner.id %>/delete" method="post">
+  <input id="delete-button--button" type="submit" value="delete">
+
+  </form>
+
+</div>
