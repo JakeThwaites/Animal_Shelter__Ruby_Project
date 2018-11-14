@@ -39,6 +39,12 @@ end
 
 post '/owners/:id/delete' do
   owner = Owner.find_owner_by_id(params['id'])
+
+  animals = owner.adopted_animals()
+  for animal in animals
+    animal.availability = "Available"
+  end
+  binding.pry
   owner.delete()
   redirect to "/owners"
 end
