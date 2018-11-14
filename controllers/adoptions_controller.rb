@@ -5,6 +5,7 @@ require_relative( '../models/animal.rb' )
 require_relative( '../models/owner.rb' )
 require_relative( '../models/adoption.rb' )
 also_reload( '../models/*' )
+require('pry')
 
 get '/adoptions' do
   @adoptions = Adoption.all()
@@ -18,15 +19,18 @@ get '/adoptions/new' do
 end
 
 post '/adoptions' do
+
   adoption = Adoption.new(params)
   adoption.save()
+  animal = Animal.find_animal_by_id(adoption.animal_id)
+  animal.availability = "Adopted"
+  animal.update()
+
   redirect to("/adoptions")
 end
 
 get '/adoptions/:id' do
   @adoption = Adoption.find_adoption_by_id(params['id'])
-  # @owner = Owner.find_owner_by_id(params)
-  # @animal = Animal.find_animal_by_id(params[@adoption.animal_id])
   erb(:"adoptions/show")
 end
 

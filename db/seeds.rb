@@ -58,7 +58,6 @@ owner3.save()
 
 owner1.adopt_an_animal(animal1, '2008-09-01')
 owner2.adopt_an_animal(animal2, '2008-09-01')
-owner1.adopt_an_animal(animal3, '2008-09-01')
 
 
 binding.pry
