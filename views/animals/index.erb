@@ -1,22 +1,17 @@
 <div class="top-nav--animals">
 
+  <div class="navbar">
 
-
-
-
-
-<div class="navbar">
-
-  <div class="dropdown">
-    <button class="dropbtn">Species
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <% for species in @specieses %>
-      <a href="/animals/species/<%= species %>"><%= species %></a>
-      <% end %>
+    <div class="dropdown">
+      <button class="dropbtn">Species
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <% for species in @specieses %>
+        <a href="/animals/species/<%= species %>"><%= species %></a>
+        <% end %>
+      </div>
     </div>
-  </div>
 
   <div class="dropdown">
     <button class="dropbtn">Availability
@@ -49,18 +44,16 @@
 <div class="flex-container">
   <% for animal in @animals %>
   <div class="animal-container">
+
     <img class="animal-url--index"src="<%= animal.image_url%>" alt="A photo of <%= animal.name %>">
 
     <div class="animal-text">
-
-
-    <h2><%= animal.name %></h2>
-    <p>Age: <%= animal.age %></p>
-    <p>Species: <%= animal.species %></p>
-    <p>Availability: <%= animal.availability %></p>
-    <a href="animals/<%= animal.id %>">View more info</a>
-
-</div>
+      <h2><%= animal.name %></h2>
+      <p>Age: <%= animal.age %></p>
+      <p>Species: <%= animal.species %></p>
+      <p>Availability: <%= animal.availability %></p>
+      <a href="animals/<%= animal.id %>">View more info</a>
+    </div>
 
   </div>
   <% end %>

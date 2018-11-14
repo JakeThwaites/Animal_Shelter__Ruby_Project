@@ -1,3 +1,7 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .menu-item {
   display: inline;
 }
@@ -17,7 +21,6 @@
   background: #1abc9c;
   color: black;
   font-size: 20px;
-  font-family: Arial;
   text-decoration: none;
   display: flex;
 }
@@ -50,7 +53,6 @@
 }
 
 #new-animal-button {
-  font: bold Arial;
   text-decoration: none;
   background-color: silver;
   color: black;
@@ -112,7 +114,6 @@
 .navbar {
   overflow: hidden;
   background-color: #979B9E;
-  font-family: Arial;
 }
 
 .navbar a {
@@ -224,7 +225,6 @@
 
 .form-new--title {
   text-align: center;
-  font-family: Arial;
 }
 
 .form--new {
@@ -244,14 +244,12 @@
 .form-el label {
   display: block;
   font-size: 20px;
-  font-family: Helvetica;
 }
 
 .form-el input {
   height: 30px;
   width: 300px;
   font-size: 18px;
-  font-family: Arial;
 }
 
 .form-el select {
@@ -264,7 +262,6 @@
   height: 200px;
   width: 300px;
   font-size: 18px;
-  font-family: Arial;
 }
 
 #sex-label {
@@ -288,7 +285,6 @@
   border-radius: 4px;
   background-color: #silver;
   cursor: pointer;
-  font-family: Helvetica;
 }
 
 
@@ -317,13 +313,11 @@
   height: 100px;
   width: 300px;
   font-size: 16px;
-  font-family: Arial;
 }
 
 #description-label {
   display: block;
   font-size: 20px;
-  font-family: Arial;
 }
 
 #submit-button--edit {
@@ -331,7 +325,6 @@
   border-radius: 4px;
   background-color: #B2B1B1;
   cursor: pointer;
-  font-family: Helvetica;
 }
 
 
@@ -356,7 +349,7 @@
 }
 
 #new-animal-button {
-  font: bold Arial;
+  font: bold;
   text-decoration: none;
   background-color: #979B9E;
   color: black;
@@ -413,15 +406,11 @@
 
 }
 
-
-
 .navbar {
   overflow: hidden;
   background-color: #979B9E;
-  font-family: Arial;
 }
 
-/* Links inside the navbar */
 .navbar a {
   float: left;
   font-size: 16px;
@@ -431,13 +420,11 @@
   text-decoration: none;
 }
 
-/* The dropdown container */
 .dropdown {
   float: left;
   overflow: hidden;
 }
 
-/* Dropdown button */
 .dropdown .dropbtn {
   font-size: 16px;
   border: none;
@@ -445,26 +432,20 @@
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+
 }
 
-/* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: #A6AAAE;
 }
 
-/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   float: none;
   color: black;
@@ -474,23 +455,17 @@
   text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-
-/* owner show */
-
 .owner-text-box--show {
   text-align: center;
   font-size: 18px;
-  font-family: Arial;
 }
 
 #owner-info--h1 {
@@ -498,18 +473,14 @@
 }
 
 
-
-
-
 /* owner index page */
-
 
 .owner  {
   border: 1px solid grey;
-  font-family: Arial;
+  padding-bottom: 20px;
 }
 
 .adoption {
   border: 1px solid grey;
-  font-family: Arial;
+  padding-bottom: 20px;
 }
