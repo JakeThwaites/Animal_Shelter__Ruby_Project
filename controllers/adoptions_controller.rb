@@ -36,6 +36,10 @@ end
 
 post '/adoptions/:id/delete' do
   adoption = Adoption.find_adoption_by_id(params['id'])
+  animal = Animal.find_animal_by_id(adoption.animal_id)
+  animal.availability = "Available"
+  animal.update
   adoption.delete()
+
   redirect to "/adoptions"
 end

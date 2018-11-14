@@ -52,6 +52,10 @@
   justify-content: space-between;
 }
 
+#slogan {
+  font-style: italic;
+}
+
 #new-animal-button {
   text-decoration: none;
   background-color: silver;
@@ -191,7 +195,7 @@
 #edit-button {
   font-size: 110%;
   border-radius: 4px;
-  background-color: #E0E3E5;
+  background-color: #979B9E;
 }
 
 #edit-button-text {
