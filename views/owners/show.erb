@@ -15,7 +15,7 @@
   <p>Post Code: <%= @owner.post_code %></p>
 
   <% for animal in @owner.adopted_animals%>
-    <p>Adopted Animal: <a href="/animals/<%= @owner.adopted_animals__id %>"><%= @owner.adopted_animals__names %></a></p>
+    <p>Adopted Animal: <a href="/animals/<%= animal.id %>"><%= animal.name %></a></p>
   <% end %>
 
     <button class="pure-button pure-button-active" id="edit-button" type="button"><a id="edit-button-text" href="/owners/<%=  @owner.id%>/edit">Edit</a></button>

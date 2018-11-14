@@ -56,11 +56,17 @@ class Owner
   end
 
   def adopted_animals__names()
+    adopted_animal_names = []
+
     sql = "SELECT animals.* FROM animals INNER JOIN adoptions ON animals.id = adoptions.animal_id WHERE adoptions.owner_id = $1"
     values = [@id]
     animals = SqlRunner.run(sql, values)
-    name = animals.first()['name'].to_s
-    return name
+    # name = animals.first()['name'].to_s
+    # return name
+    for animal in animals
+      adopted_animal_names.push(animal['name'].to_s)
+    end
+    return adopted_animal_names
   end
 
   def adopted_animals__id()
