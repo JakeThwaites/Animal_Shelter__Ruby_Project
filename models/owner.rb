@@ -77,13 +77,6 @@ class Owner
     return id
   end
 
-  def adopt_an_animal(animal, date)
-    adoption = Adoption.new({"owner_id" => @id, "animal_id" => animal.id, "adoption_date" => date})
-    adoption.save()
-    animal.availability = "Adopted"
-    animal.update()
-  end
-
   def self.find_owner_by_id(id)
     sql = "SELECT * FROM owners WHERE id = $1"
     values = [id]

@@ -39,13 +39,6 @@ class Animal
     return animals.map { |animal| Animal.new(animal) }
   end
 
-  def self.find_by_breed(breed)
-    sql = "SELECT * FROM animals WHERE species = $1"
-    values = [breed]
-    animals = SqlRunner.run(sql, values)
-    return animals.map { |animal| Animal.new(animal) }
-  end
-
   def self.all_species
     unique_specieses = []
     all_animals = self.all()
@@ -108,11 +101,6 @@ class Animal
     else
       return ""
     end
-  end
-
-  def add_pet_description(text)
-    @pet_description = text
-    update()
   end
 
   def self.find_animal_by_id(id)
