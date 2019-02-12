@@ -1,7 +1,7 @@
 require_relative( "../models/animal" )
 require_relative("../models/owner")
 require_relative("../models/adoption")
-require("pry-byebug")
+
 
 Adoption.delete_all()
 Animal.delete_all()
@@ -60,5 +60,4 @@ owner1.adopt_an_animal(animal1, '2008-09-01')
 owner2.adopt_an_animal(animal2, '2008-09-01')
 
 
-binding.pry
 nil
